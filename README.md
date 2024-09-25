@@ -9,7 +9,7 @@ Shell скрипт и [роль для Ansible](https://galaxy.ansible.com/ui/st
 
 # Скрипт для установки
 ```
-sh <(wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwrt/master/getdomains-install.sh)
+sh <(wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master/getdomains-install.sh)
 ```
 
 ## AmneziaWG
@@ -24,25 +24,25 @@ sh <(wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwr
 
 ### Запуск
 ```
-wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwrt/master/getdomains-check.sh | sh
+wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master/getdomains-check.sh | sh
 ```
 
 По-умолчанию запускается на русском языке. Если нужно запустить на английском, то после `sh` нужно добавить `-s --lang en`. Аналогично для проверок на подмену DNS и создания дампа.
 
 ```
-wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwrt/master/getdomains-check.sh | sh -s --lang en
+wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master/getdomains-check.sh | sh -s --lang en
 ```
 
 ### Запустить с проверкой на подмену DNS
 ```
-wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwrt/master/getdomains-check.sh | sh -s dns
+wget -O - https://raw.githubusercontent.com/itdokonoffginfo/domain-routing-openwrt/master/getdomains-check.sh | sh -s dns
 ```
 
 ### Запустить с созданием dump
 Все чувствительные переменные затираются.
 
 ```
-wget -O - https://raw.githubusercontent.com/itdoginfo/domain-routing-openwrt/master/getdomains-check.sh | sh -s dump
+wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master/getdomains-check.sh | sh -s dump
 ```
 
 Поиск ошибок вручную: https://habr.com/ru/post/702388/

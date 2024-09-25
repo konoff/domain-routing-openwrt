@@ -567,6 +567,8 @@ add_packages() {
     else
         printf "\033[32;1mInstall curl\033[0m\n"
         opkg install curl
+        opkg install luci-i18n-base-ru
+        opkg install luci-proto-wireguard
     fi
 
     if opkg list-installed | grep -q nano; then
@@ -604,7 +606,12 @@ add_getdomains() {
             break
             ;;
 
-        4) 
+        3) 
+            COUNTRY=konoff
+            break
+            ;;
+
+        5) 
             echo "Skiped"
             COUNTRY=0
             break
@@ -622,6 +629,8 @@ add_getdomains() {
         EOF_DOMAINS=DOMAINS=https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/outside-dnsmasq-nfset.lst
     elif [ "$COUNTRY" == 'ukraine' ]; then
         EOF_DOMAINS=DOMAINS=https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Ukraine/inside-dnsmasq-nfset.lst
+    elif [ "$COUNTRY" == 'konoff' ]; then
+        EOF_DOMAINS=DOMAINS=https://raw.githubusercontent.com/konoff/wglistpublic/refs/heads/main/nfset.lst
     fi
 
     if [ "$COUNTRY" != '0' ]; then
