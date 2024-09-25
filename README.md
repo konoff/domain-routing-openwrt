@@ -35,7 +35,7 @@ wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master
 
 ### Запустить с проверкой на подмену DNS
 ```
-wget -O - https://raw.githubusercontent.com/itdokonoffginfo/domain-routing-openwrt/master/getdomains-check.sh | sh -s dns
+wget -O - https://raw.githubusercontent.com/konoff/domain-routing-openwrt/master/getdomains-check.sh | sh -s dns
 ```
 
 ### Запустить с созданием dump
