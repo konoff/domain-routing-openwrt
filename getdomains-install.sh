@@ -577,6 +577,7 @@ add_packages() {
     fi
     opkg install luci-i18n-base-ru
     opkg install luci-proto-wireguard
+    opkg install mc
 }
 
 add_getdomains() {
@@ -585,7 +586,8 @@ add_getdomains() {
     echo "1) Russia inside. You are inside Russia"
     echo "2) Russia outside. You are outside of Russia, but you need access to Russian resources"
     echo "3) Ukraine. uablacklist.net list"
-    echo "4) Skip script creation"
+    echo "4) Ukraine. uablacklist.net list"
+    echo "5) Skip script creation"
 
     while true; do
     read -r -p '' COUNTRY
@@ -606,7 +608,7 @@ add_getdomains() {
             break
             ;;
 
-        3) 
+        4) 
             COUNTRY=konoff
             break
             ;;
