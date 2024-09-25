@@ -567,8 +567,6 @@ add_packages() {
     else
         printf "\033[32;1mInstall curl\033[0m\n"
         opkg install curl
-        opkg install luci-i18n-base-ru
-        opkg install luci-proto-wireguard
     fi
 
     if opkg list-installed | grep -q nano; then
@@ -577,6 +575,8 @@ add_packages() {
         printf "\033[32;1mInstall nano\033[0m\n"
         opkg install nano
     fi
+    opkg install luci-i18n-base-ru
+    opkg install luci-proto-wireguard
 }
 
 add_getdomains() {
