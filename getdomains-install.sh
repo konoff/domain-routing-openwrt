@@ -586,7 +586,7 @@ add_getdomains() {
     echo "1) Russia inside. You are inside Russia"
     echo "2) Russia outside. You are outside of Russia, but you need access to Russian resources"
     echo "3) Ukraine. uablacklist.net list"
-    echo "4) short-list
+    echo "4) short-list"
     echo "5) Skip script creation"
 
     while true; do
